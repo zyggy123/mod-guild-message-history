@@ -1,0 +1,40 @@
+#
+# Guild Message History module
+#
+
+# Enable or disable the module. 1 = enabled, 0 = disabled (default: 1)
+GuildMessageHistory.Enable = 1
+
+# Also archive officer chat (/o). Officer chat can contain internal
+# guild information, so it is disabled by default. (default: 0)
+GuildMessageHistory.IncludeOfficerChat = 0
+
+# Maximum number of archived messages replayed on login (1-200, default: 100).
+GuildMessageHistory.MaxMessages = 100
+
+# Never replay messages older than this many days (1-3650, default: 30).
+GuildMessageHistory.MaxAgeDays = 30
+
+# Delete archived messages older than this many days (0-3650, default: 60).
+# Set to 0 to keep the archive forever, but be aware that the table grows
+# with every guild message sent on the realm.
+GuildMessageHistory.RetentionDays = 60
+
+# How long to wait after login before the archive is displayed (0-60 seconds,
+# default: 4). A small delay keeps the lines from showing up while the client
+# is still loading into the world.
+GuildMessageHistory.DelaySeconds = 4
+
+# Delay between two replayed lines, in milliseconds (0-5000, default: 120).
+# This makes the archive walk down the chat instead of everything appearing at once.
+GuildMessageHistory.LineDelayMs = 120
+
+# How the archive is delivered to the client (default: system):
+#   system  - system chat lines, colored like guild chat
+#   channel - channel chat lines of ChannelName, so they can live in their own
+#             chat window; the player must /join the channel once for the client
+#             to list it in the chat settings
+GuildMessageHistory.ChatMode = system
+
+# Channel name used when ChatMode = channel (default: GuildHistory)
+GuildMessageHistory.ChannelName = GuildHistory
